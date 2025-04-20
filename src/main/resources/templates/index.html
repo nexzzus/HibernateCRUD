@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de clientes</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/agregar">Agregar</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<table class="formulario-listar">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cliente : ${clientes}">
+        <td><a th:href="@{/cliente/{id}(id=${cliente.id})}" th:text="${cliente.id}"></a></td>
+        <td><a th:href="@{/cliente/{id}(id=${cliente.id})}" th:text="${cliente.nombre}"></a></td>
+        <td><a th:href="@{/cliente/{id}(id=${cliente.id})}" th:text="${cliente.apellido}"></a></td>
+        <td><a th:href="@{/cliente/{id}(id=${cliente.id})}" th:text="${cliente.email}"></a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

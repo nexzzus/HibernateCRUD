@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f4f6f8;
+}
+h3{
+    text-align: center;
+    color: #1a237e;
+    margin: 20px;
+    font-family: "Times New Roman", serif;
+}
+table{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #ffffff	;
+    border-color: #cfd8dc	;
+}
+th{
+    background-color: #e3eaf2;
+}
+.navbar {
+    background-color: #1a237e;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #2196f3;
+}
+.formulario-guardar {
+     width: 500px;
+     margin: 40px auto;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     background-color: #ffffff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ }
+
+.formulario-guardar input[type="text"],
+.formulario-guardar input[type="email"] {
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.formulario-guardar input[type="submit"] {
+    background-color: #1a237e;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario-guardar input[type="submit"]:hover {
+    background-color: #3949ab;
+}
+.formulario-guardar input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    margin-bottom: 10px;
+}
+.formulario-guardar table{
+    border: none;
+}
+.formulario-guardar caption{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.error{
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.63);
+    box-shadow: 0 2px 8px darkred;
+    width: 300px;
+    margin: 0 auto 5px;
+}
+.formulario-listar a{
+    text-decoration: none;
+    color: black;
+}
+.formulario-actualizar{
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+}
+.formulario-eliminar{
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+}

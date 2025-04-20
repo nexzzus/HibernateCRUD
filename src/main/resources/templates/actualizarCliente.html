@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar cliente</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}"/>
+</head>
+<body>
+<form class="formulario-actualizar formulario-guardar" th:action="@{/actualizar}" th:object="${cliente}" method="post">
+    <table class="tabla-guardar">
+        <caption>Actualizar cliente</caption>
+
+        <!-- Campo oculto para el ID -->
+        <input type="hidden" th:field="*{id}"/>
+
+        <tr>
+            <td>
+                <input type="text" th:field="*{nombre}" placeholder="Nombre"/>
+                <div class="error" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" th:field="*{apellido}" placeholder="Apellido"/>
+                <div class="error" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="email" th:field="*{email}" placeholder="Email"/>
+                <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Actualizar"/>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- Formulario separado para eliminar -->
+<form class="formulario-actualizar formulario-guardar formulario-eliminar" th:action="@{/eliminar/{id}(id=${cliente.id})}" method="post">
+    <input type="hidden" th:name="id" th:value="${cliente.id}" />
+    <input type="submit" value="Eliminar" onclick="return confirm('¿Seguro que deseas eliminar este cliente?');">
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Guardar cliente</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}" />
+</head>
+<body>
+<form class="formulario-guardar" th:action="@{/guardar}" th:object="${cliente}" method="post">
+    <table class="tabla-guardar">
+        <caption>Guardar cliente</caption>
+        <tr>
+            <td>
+                <input type="text" id="nombre" th:field="*{nombre}" placeholder="Nombre">
+                <div class="error" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="apellido" th:field="*{apellido}" placeholder="Apellido">
+                <div class="error" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="email" id="email" th:field="*{email}" placeholder="Email">
+                <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Guardar">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
