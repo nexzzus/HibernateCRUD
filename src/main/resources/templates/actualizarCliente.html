@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <title>Actualizar cliente</title>
     <link rel="stylesheet" th:href="@{/estilos.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/agregar">Agregar</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/"><i class="fas fa-arrow-left"></i>Volver</a></li>
+    </ul>
+</nav>
 <form class="formulario-actualizar formulario-guardar" th:action="@{/actualizar}" th:object="${cliente}" method="post">
     <table class="tabla-guardar">
         <caption>Actualizar cliente</caption>
